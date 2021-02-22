@@ -1,8 +1,8 @@
 let socket = io()
 let username;
-
+let btnSend;
 let start = $('#startbtn')
-
+$('#chatbox').hide()
 
 start.on("click", () => {
     let user = $('#inpusername').val()
@@ -23,17 +23,39 @@ start.on("click", () => {
 })
 socket.on('passmismatch', ()=> {
     console.log("Password Invalid")
+    
 })
 
 socket.on("usermismatch", ()=> {
     console.log("No such username exists")
 })
 
-socket.on('logged_in', ()=> {
+socket.on('logged_in', (data)=> {
     console.log("Valid Login Attempt")
+    username= data.name;
     $('#inpusername').hide()
     $('#inppassword').hide()
     start.hide()
-
+    $('#chatbox').show()
 })
 
+
+$('#sendbtn').on("click" , () => {
+socket.emit('send', {
+    from:username,
+    message: $('#message').val()
+})
+})
+// socket.on('msg_rcvd', (data) => {
+//     $('#messagebox').append($('div').text(data.message))
+// })
+
+socket.on('msg_rcvd', (data) => {
+   let box = $('#messagebox')
+   console.log(data)
+   box.append(`<div> ${data.message}</div>`)
+})
+
+
+
+// <div style="text-align:right;border: 1px solid red;border-radius:10px;"></div>

@@ -19,13 +19,22 @@
     <div class="container">
         <div class ="card px-4 m-5" id="chatcard" style="height: 30rem;background-color: #84a522 ;">
             <div class="row p-2"><b>Welcome to ChatApp! Be Kind 😏</b></div>
-            <div class="row" style="height: 25rem;">
-                <div class="card p-4" style="background-color:#616f39;" id="logincard">
+            <div class="row" style="height: 20rem;">
+                <div class="card p-4" style="background-color:#616f39;height:125%;" id="logincard">
                     
-                        <input class="row m-1" id="inpusername" placeholder="Enter Username">
-                        <input class="row m-1" id="inppassword" placeholder="Enter Password">
-                        <button class="row btn btn-dark m-1" id="startbtn">Start</button>
+                    <input class="row m-1" id="inpusername" placeholder="Enter Username">
+                    <input class="row m-1" id="inppassword" placeholder="Enter Password">
+                    <button class="row btn btn-dark m-1 btn-sm" id="startbtn">Start</button>
                     
+                        <div id="chatbox" class="card" style="height:100%">
+                            <div id="messagebox" class="card overflow-auto p-3" style="width:100%; height:80%">
+                               <!-- messages are written here-->                               
+                                
+                            </div>
+                                <input id="message" class="row m-1" placeholder="enter your message">
+                                <button id="sendbtn" class="row btn btn-dark btn-sm m-1">Send</button>
+                        </div>
+                                            
                 </div>
             </div>
         </div>

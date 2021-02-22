@@ -22,13 +22,19 @@ io.on("connection", (socket)=> {
     socket.on('login',(data)=> {
         if(users[data.username]) {
             if(users[data.username] == data.password) {
-                socket.emit('logged_in');
+                socket.emit('logged_in',{
+                    name: data.username
+                });
             } else {
                 socket.emit('passmismatch');
             }
         } else {
             socket.emit('usermismatch');
         }
+    })
+
+    socket.on('send', (data) => {
+        io.emit('msg_rcvd',data)
     })
 })
 
