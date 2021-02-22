@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+    <title>ChatApp</title> 
+</head>
+<body id="bod">
+    <div id="head" class="container-fluid" style="text-align:center;">Chat APP <i class="fa fa-comments"></i></div>
+
+    <div class="container">
+        <div class ="card px-4 m-5" id="chatcard" style="height: 30rem;background-color: #84a522 ;">
+            <div class="row p-2"><b>Welcome to ChatApp! Be Kind 😏</b></div>
+            <div class="row" style="height: 25rem;">
+                <div class="card p-4" style="background-color:#616f39;" id="logincard">
+                    
+                        <input class="row m-1" id="inpusername" placeholder="Enter Username">
+                        <input class="row m-1" id="inppassword" placeholder="Enter Password">
+                        <button class="row btn btn-dark m-1" id="startbtn">Start</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class= container-fluid" style="height:5rem;">
+        <div class="row">
+            <div class="col" style="height:5rem">col 1</div>
+            <div class="col">col 1</div>
+            <div class="col">col 1</div>
+            <div class="col">col 1</div>
+        </div>
+    </div>
+</body>
+</html>
