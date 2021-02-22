@@ -1,0 +1,23 @@
+{
+  "name": "chatpackage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayyp35/ChatApp.git"
+  },
+  "author": "jayyp35",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayyp35/ChatApp/issues"
+  },
+  "homepage": "https://github.com/jayyp35/ChatApp#readme"
+}
