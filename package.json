@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/jayyp35/ChatApp/issues"
   },
+  "engines" : {
+    "node" : "14",
+    "npm" : "6"
+  },
   "homepage": "https://github.com/jayyp35/ChatApp#readme"
 }
