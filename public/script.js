@@ -41,20 +41,34 @@ socket.on('logged_in', (data)=> {
 
 
 $('#sendbtn').on("click" , () => {
-socket.emit('send', {
-    from:username,
-    message: $('#message').val()
-})
+    let a = {
+        from: username,
+        message: $('#message').val()
+    }
+    socket.emit('send',a)
+    addMessageSent(a)
+    $('#message').val('')
 })
 // socket.on('msg_rcvd', (data) => {
 //     $('#messagebox').append($('div').text(data.message))
 // })
 
 socket.on('msg_rcvd', (data) => {
-   let box = $('#messagebox')
-   console.log(data)
-   box.append(`<div> ${data.message}</div>`)
+   addMessageRcvd(data)
 })
+
+function addMessageRcvd(data) {
+    let box = $('#messagebox')
+    console.log(data)
+    box.append(`<div class="m-1 p-2" style="text-align:left;color:#eeeeee;background-color:#393e46;border-radius: 10px;">
+                    <div style="font-size:6pt">${data.from}</div>
+                    <div>${data.message}</div> 
+                </div>`)
+}
+function addMessageSent(data) {
+    let box = $('#messagebox')
+    box.append(`<div class="m-1 px-3" style="text-align:right;color:#eeeeee;background-color:#222831;border-radius: 10px;"> ${data.message}</div>`)
+}
 
 
 
