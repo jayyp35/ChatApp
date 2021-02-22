@@ -5,7 +5,7 @@ const app = express()
 const socketio = require('socket.io')
 const server = http.createServer(app)
 const io = socketio(server)
-app.use('/' , express.static(__dirname + '/public'))
+app.use('/' , express.static(__dirname + '/docs'))
 
 let users = {
     'Jay' : 'Jay123',
